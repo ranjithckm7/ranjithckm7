@@ -1,0 +1,26 @@
+$Net35="KB4565580"
+$Net45="KB4565581"
+$Net47="KB4565585"
+$Net48="KB4565588"
+
+$Net="$Net35,$Net45,$Net47,$Net48"
+
+Foreach($PSItem in $Net)
+{
+    If(Get-HotFix -Id $Net35){
+    Write-Host "$Net35 is installed for .NetFramework 3.5"
+    	
+    }
+    If(Get-HotFix -Id $Net45){
+    Write-Host "$Net45 is installed for .NetFramework 4.5"
+    Break
+    }
+    If(Get-HotFix -Id $Net47){
+    Write-Host "$Net47 is installed for .NetFramework 4.6 to 4.7"
+    Break
+    }
+    If(Get-HotFix -Id $Net48){
+    Write-Host "$Net48 is installed for .NetFramework 4.8"
+    Break
+    }
+}
