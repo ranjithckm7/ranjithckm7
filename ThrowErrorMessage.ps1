@@ -1,0 +1,1 @@
+cmd.exe /c powershell.exe -command $wshell=new-object -comobject wscript.shell;$wshell.popup('This computer is configured with an Unknown BIOS password. Please remove the password and restart the deployment.',0,'*** UNKNOWN BIOS PASSWORD ***',0x1);exit 9
